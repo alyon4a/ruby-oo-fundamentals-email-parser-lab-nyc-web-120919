@@ -15,7 +15,7 @@ class EmailAddressParser
   
   def parse
     clean_strings = @email_strings.split.map { |email| email.gsub(/[\s,]/ ,"")}
-    clean_strings
+    clean_strings.unique
     
   end
 end
